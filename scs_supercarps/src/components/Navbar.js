@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-//import { ReactComponent as Hamburger } from '../../assets/icons/hamburger.svg'          <Hamburger />
-import { ReactComponent as Brand } from '../img/menu-outline.svg'       
+import Logo from '../img/logo.png'        
+//import { ReactComponent as Brand } from '../img/menu-outline.svg'       <Brand /> 
 import './navbar.css'
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-    <Brand />
+          <Logo />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
 
