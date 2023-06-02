@@ -23,7 +23,15 @@ body {
     position: relative;
 }
 
-.logo {}
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.logo svg {
+    height: 50px;
+    width: 50px;
+}
 
 .menu-icon {
     display: none;
