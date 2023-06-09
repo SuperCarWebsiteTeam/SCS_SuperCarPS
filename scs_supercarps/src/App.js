@@ -1,25 +1,37 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route }
-	from 'react-router-dom';
-import Home from './pages/index';
-import Cars from './pages/cars';
-import SignUp from './pages/signup';
-import Contact from './pages/contact';
+import HomePage from './pages/HomePage.js';
+import Cars from './pages/cars.js';
 
 function App() {
-	return (
-		<Router>
-			<Navbar />
-			<Routes>
-				<Route exact path='/index'  element={<Home />} />
-				<Route path='/cars' element={<Cars />} />
-				<Route path='/contact' element={<Contact />} />
-				<Route path='/sign-up' element={<SignUp />} />
-			</Routes>
-		</Router>
-	);
+  return (
+    <Router>
+      <div className="App">
+        <header>
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/cars">Cars</Link></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cars" element={<Cars />} />
+          </Routes>
+        </main>
+
+        <footer>
+          <p>&copy; {new Date().getFullYear()} Supercar World. All rights reserved.</p>
+        </footer>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
