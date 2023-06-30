@@ -17,12 +17,11 @@ const Hero = () => {
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
-          Find Supercars!
+        Welcome to CarHub
         </h1>
 
         <p className="hero__subtitle">
-          Streamline your car rental experience with our effortless booking
-          process.
+        Check out these amazing supercars
         </p>
 
         <CustomButton
