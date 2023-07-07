@@ -8,7 +8,6 @@ export default async function Home({ searchParams }: HomeProps) {
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 0,
     fuel: searchParams.fuel || "",
-    limit: searchParams.limit || 10,
     model: searchParams.model || "",
   });
 
@@ -40,11 +39,6 @@ export default async function Home({ searchParams }: HomeProps) {
                 <CarCard car={car} />
               ))}
             </div>
-
-            <ShowMore
-              pageNumber={(searchParams.limit || 10) / 10}
-              isNext={(searchParams.limit || 10) > allCars.length}
-            />
           </section>
         ) : (
           <div className='home__error-container'>
